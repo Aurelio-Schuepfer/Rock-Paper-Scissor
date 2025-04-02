@@ -1,0 +1,326 @@
+body {
+    background: radial-gradient(circle, rgb(255, 0, 255), rgb(188, 20, 188));
+    font-family: Comic Sans MS;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  h1 {
+    position: relative;
+    top: -35px;
+    font-size: 3rem;
+    text-align: center;
+    position: absolute;
+    color: white;
+  }
+  button {
+justify-content: center;
+align-items: flex-end;
+  }
+  button img {
+    width: 100%; 
+    transition: 0.3s ease-in-out;
+  }
+  button:hover img {
+    transform: scale(1.1); 
+    box-shadow: 0 0 25px rgb(0, 191, 255), 0 0 40px rgb(0, 162, 255); 
+    color: rgb(255, 255, 255); 
+  }
+  #btnStein
+  {
+position: absolute;
+bottom: -200px;
+animation: slidetotop 1s forwards 0.25s;
+background: transparent; 
+border: none; 
+display: flex;
+width: 200px;
+height: 200px;
+  }
+  #btnSchere
+  {
+position: absolute;
+bottom: -200px;
+left: 550px;
+animation: slidetotop 1s forwards 0s;
+background: transparent; 
+border: none; 
+display: flex;
+width: 200px;
+height: 200px;
+  }
+  #btnPapier
+  {
+position: absolute;
+bottom: -200px;
+right: 550px;
+animation: slidetotop 1s forwards 0.5s;
+background: transparent; 
+border: none; 
+display: flex;
+width: 200px;
+height: 200px;
+  }
+  #btnReset
+  {
+    background: radial-gradient(circle, rgb(255, 0, 255), rgb(188, 20, 188));
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 200px;
+    height: 50px;
+  }
+  p
+  {
+font-size: 35px;
+  }
+#Spieler1
+{
+color: red;
+position: absolute;
+left: 20px;
+top: 0px;
+transition: 0.1s ease-in-out;
+}
+#Spieler2
+{
+  color: blue;
+  position: absolute;
+  right: 20px;
+  top: 0px;
+  transition: 0.1s ease-in-out;
+}
+#Spieler1:hover
+{
+  transform: scale(1.1); 
+  box-shadow: 0 0 25px rgb(208, 0, 255), 0 0 40px rgb(208, 0, 255); 
+}
+#Spieler2:hover
+{
+  transform: scale(1.1); 
+  box-shadow: 0 0 25px rgb(208, 0, 255), 0 0 40px rgb(208, 0, 255); 
+}
+#Square1 
+{
+  width: 400px;
+  height: 400px;
+  background: transparent;
+  border: 10px solid rgb(57, 212, 255);
+  position: absolute;
+  top: 160px; 
+  left: 100px; 
+  z-index: 1000;
+  box-shadow: 0 0 15px rgb(84, 224, 255), 0 0 40px rgb(208, 0, 255);
+  transition: 0.3s ease-in-out; 
+}
+#Square1:hover
+{
+transform: scale(1.1); 
+box-shadow: 0 0 50px rgb(84, 224, 255), 0 0 40px rgb(208, 0, 255);
+}
+#Square2
+{
+  width: 400px;
+  height: 400px;
+  background: transparent;
+  border: 10px solid rgb(57, 212, 255);
+  position: absolute; 
+  top: 160px; 
+  right: 100px; 
+  z-index: 1000;
+  box-shadow: 0 0 15px rgb(84, 224, 255), 0 0 40px rgb(208, 0, 255);
+  transition: 0.3s ease-in-out; 
+}
+#Square2:hover
+{
+transform: scale(1.1); 
+box-shadow: 0 0 50px rgb(84, 224, 255), 0 0 40px rgb(208, 0, 255);
+}
+#Squaremid
+{
+  width: 400px;
+  height: 400px;
+  background: transparent;
+  border: 10px solid rgb(57, 212, 255);
+  position: absolute; 
+  top: 260px; 
+  z-index: 1000;
+  box-shadow: 0 0 15px rgb(84, 224, 255), 0 0 40px rgb(208, 0, 255);
+  transition: 0.3s ease-in-out; 
+}
+#Squaremid:hover
+{
+transform: scale(1.1); 
+box-shadow: 0 0 50px rgb(84, 224, 255), 0 0 40px rgb(208, 0, 255);
+}
+#scorehyphen
+{
+  width: 100px;
+  height: 20px;
+background: rgb(84, 224, 255);
+position: absolute;
+top: 180px;
+}
+#winnerMessage
+{
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  top: 5px;
+  text-shadow: 10px 10px 30px rgb(0, 229, 255);
+  z-index: 1001;
+}
+#scorePlayer1
+{
+color: red;
+font-size: 150px;
+position: absolute;
+top: -70px;
+left: 750px;
+text-shadow: 10px 10px 30px red;
+transition: 0.3s ease-in-out; 
+}
+#scorePlayer1:hover
+{
+  transform: scale(1.3);
+}
+#scorePlayer2
+{
+font-size: 150px;
+color: blue;
+position: absolute;
+top: -70px;
+right: 750px;
+text-shadow: 10px 10px 30px blue;
+transition: 0.3s ease-in-out; 
+}
+#scorePlayer2:hover
+{
+  transform: scale(1.3);
+}
+#ScissorPlayer1 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: -300px; 
+  top: 200px;
+}
+
+#RockPlayer1 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: -300px; 
+  top: 0px;
+}
+
+#PaperPlayer1 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: -300px; 
+  top: 0px;
+}
+#ScissorPlayer2 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  right: -300px; 
+  top: 200px;
+}
+
+#RockPlayer2 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  right: -300px; 
+  top: 0px;
+}
+
+#PaperPlayer2 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  right: -300px; 
+  top: 0px;
+}
+
+@keyframes throwAnimationPlayer1 {
+  0% {
+      left: -300px; 
+      top: 0; 
+      transform: rotate(0deg); 
+  }
+  30% {
+      left: 9%; 
+      top: 225px; 
+      transform: rotate(360deg); 
+  }
+  70% {
+    left: 9%; 
+    top: 225px; 
+    transform: rotate(360deg); 
+}
+  100% {
+      left: 42%; 
+      top: 310px; 
+      transform: rotate(360deg); 
+  }
+}
+@keyframes SlideoutPlayer1 {
+  0% {
+      left: 40%; 
+      top: 225px; 
+}
+  100% {
+    left: -300px; 
+    top: 0; 
+  }
+}
+@keyframes throwAnimationPlayer2 {
+  0% {
+      right: -300px; 
+      top: 0; 
+      transform: rotate(0deg); 
+  }
+  30% {
+      right: 9%; 
+      top: 225px; 
+      transform: rotate(360deg); 
+  }
+  70% {
+    right: 9%; 
+    top: 225px; 
+    transform: rotate(360deg); 
+}
+  100% {
+      right: 42%; 
+      top: 310px; 
+      transform: rotate(360deg); 
+  }
+}
+@keyframes SlideoutPlayer2 {
+  0% {
+      right: 40%; 
+      top: 225px; 
+}
+  100% {
+    right: -300px; 
+    top: 0; 
+  }
+}
+
+@keyframes slidetotop
+{
+0%
+{
+bottom: -200px;
+}
+100%
+{
+bottom: 50px;
+}
+}
